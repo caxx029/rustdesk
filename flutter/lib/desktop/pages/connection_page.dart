@@ -296,9 +296,19 @@ class _ConnectionPageState extends State<ConnectionPage>
               ],
             ).marginOnly(top: 22),
             SizedBox(height: 12),
-            Divider().paddingOnly(right: 12),
-            Expanded(child: PeerTabPage()),
           ],
+       children: [
+            Expanded(
+              child: Center(
+                child: Image.asset(
+                  'assets/rustdesk.png',
+                  width: 399, 
+                  height: 106, 
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ],       
         ).paddingOnly(left: 12.0)),
         if (!isOutgoingOnly) const Divider(height: 1),
         if (!isOutgoingOnly) OnlineStatusWidget()
